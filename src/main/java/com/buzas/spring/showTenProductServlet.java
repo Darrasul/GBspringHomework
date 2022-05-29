@@ -11,6 +11,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+// Т.к. в данном примере нет других страниц или действий, на данном этапе /showTen вынесено как название страницы в целом
+// После добавления в web.xml будет обобщающие название, а здесь добавится ', urlPatterns = "/showTen" '
 @WebServlet(name = "showTenProductServlet")
 public class showTenProductServlet extends HttpServlet {
     private static Logger logger = LoggerFactory.getLogger(showTenProductServlet.class);
@@ -19,7 +21,7 @@ public class showTenProductServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.setContentType("text/html;charset=UTF-8");
         resp.getWriter().printf("<html><body>");
-        for (int i = 0; i <= 10; i++) {
+        for (int i = 0; i < 10; i++) {
             int cost = (int) (Math.random() * 250);
             Product product;
             if (i != 6){
