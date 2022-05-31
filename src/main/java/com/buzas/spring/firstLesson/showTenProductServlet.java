@@ -1,6 +1,6 @@
-package com.buzas.spring;
+package com.buzas.spring.firstLesson;
 
-import com.buzas.spring.items.Product;
+import com.buzas.spring.firstLesson.items.Product;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
