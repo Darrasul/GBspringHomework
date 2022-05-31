@@ -1,6 +1,6 @@
 package com.buzas.spring.firstLesson;
 
-import com.buzas.spring.firstLesson.items.Product;
+import com.buzas.spring.firstLesson.items.nonSpringProduct;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -23,11 +23,11 @@ public class showTenProductServlet extends HttpServlet {
         resp.getWriter().printf("<html><body>");
         for (int i = 0; i < 10; i++) {
             int cost = (int) (Math.random() * 250);
-            Product product;
+            nonSpringProduct product;
             if (i != 6){
-                product = new Product(i, "Продукт № " + (i + 1), cost);
+                product = new nonSpringProduct(i, "Продукт № " + (i + 1), cost);
             } else {
-                product = new Product(i, "Продукт № " + (i + 1), "2 доллара");
+                product = new nonSpringProduct(i, "Продукт № " + (i + 1), "2 доллара");
             }
             resp.getWriter().printf("<h4> %d | %s | %s </h4>", product.getId(), product.getTitle(), product.getCost());
             resp.getWriter().printf("<h5/>");

@@ -1,17 +1,17 @@
 package com.buzas.spring.firstLesson.items;
 
-public class Product {
+public class nonSpringProduct {
     private int id;
     private String title;
     private String cost;
 
-    public Product(int id, String title, String cost){
+    public nonSpringProduct(int id, String title, String cost){
         this.id = id;
         this.title = title;
         this.cost = cost;
     }
 
-    public Product(int id, String title, int cost){
+    public nonSpringProduct(int id, String title, int cost){
         this.id = id;
         this.title = title;
         this.cost = cost + " рублей";
