@@ -11,7 +11,7 @@
 
   <servlet>
     <servlet-name>showTenProductServlet</servlet-name>
-    <servlet-class>com.buzas.spring.showTenProductServlet</servlet-class>
+    <servlet-class>com.buzas.spring.firstLesson.showTenProductServlet</servlet-class>
   </servlet>
 
 

@@ -1,4 +1,4 @@
-package com.buzas.spring.items;
+package com.buzas.spring.firstLesson.items;
 
 public class Product {
     private int id;
