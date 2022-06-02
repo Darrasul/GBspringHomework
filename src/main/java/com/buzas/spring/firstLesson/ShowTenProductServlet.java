@@ -1,6 +1,6 @@
 package com.buzas.spring.firstLesson;
 
-import com.buzas.spring.firstLesson.items.nonSpringProduct;
+import com.buzas.spring.firstLesson.items.NonSpringProduct;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -14,8 +14,8 @@ import java.io.IOException;
 // Т.к. в данном примере нет других страниц или действий, на данном этапе /showTen вынесено как название страницы в целом
 // После добавления в web.xml будет обобщающие название, а здесь добавится ', urlPatterns = "/showTen" '
 @WebServlet(name = "showTenProductServlet")
-public class showTenProductServlet extends HttpServlet {
-    private static Logger logger = LoggerFactory.getLogger(showTenProductServlet.class);
+public class ShowTenProductServlet extends HttpServlet {
+    private static Logger logger = LoggerFactory.getLogger(ShowTenProductServlet.class);
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -23,11 +23,11 @@ public class showTenProductServlet extends HttpServlet {
         resp.getWriter().printf("<html><body>");
         for (int i = 0; i < 10; i++) {
             int cost = (int) (Math.random() * 250);
-            nonSpringProduct product;
+            NonSpringProduct product;
             if (i != 6){
-                product = new nonSpringProduct(i, "Продукт № " + (i + 1), cost);
+                product = new NonSpringProduct(i, "Продукт № " + (i + 1), cost);
             } else {
-                product = new nonSpringProduct(i, "Продукт № " + (i + 1), "2 доллара");
+                product = new NonSpringProduct(i, "Продукт № " + (i + 1), "2 доллара");
             }
             resp.getWriter().printf("<h4> %d | %s | %s </h4>", product.getId(), product.getTitle(), product.getCost());
             resp.getWriter().printf("<h5/>");
